@@ -2,19 +2,19 @@
 
 These files were generated to satisfy the final project (week 4) requirements of the Coursera course "Getting and Cleaning Data".
 
-###Files in this repository include:
+### Files in this repository include:
 **1. run_analysis.R** - R script file designed to output a tidy data set of specific values indicated in the assignment instructions
 **2. codebook.md** - explains the variables and data included in the outputted tidy data set
 **3. README.md** - (this file); lists and explains repository files; provides overview of project
 
-###Overview
+### Overview
 As a general overview, the script is designed to organize and pare down a large amount of cell phone movement data (accelerometer and gyroscope) collected from 30 participants, each of whom demonstrated 6 activities (walking on level floor, walking up stairs, walking down stairs, sitting, standing, and laying).
 
 The assignment requests a script that will generate average performance values for specific variables (any variable containing mean or standard deviation data) of each participant on each activity. The activities were completed multiple times by each participant.
 
 A link to the raw data was provided in the assignment instructions on Coursera and also appears below. The raw data are spread across several text files and require a good amount of effort to organize, label properly, and combine. The following section walks through my steps employed to process the data; *also refer to notes provided in the script* if you are attempting to fully understand, replicate, and/or increase the efficiency of my efforts.
 
-###Processing steps
+### Processing steps
 **STEP 0:** Download data file (.zip), extract into local folder, and set that folder as the working directory in R.
 
 **STEP 1:** *Merge training and data sets to create one data set.*
@@ -40,5 +40,5 @@ I completed this step with two substeps:
 * 5A. Convert the subject variable to factor (it begins as integer).
 * 5B. Create an object using grouping and summarization that outputs the mean for each subject by each activity; generate a .csv file to output this object. *Please refer to the codebook for details on the outputted variables and data contained in the .csv file.*
 
-###Link to raw Data
+### Link to raw Data
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
