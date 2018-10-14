@@ -4,20 +4,21 @@
 #       Created by David J. Bauer, 2018-10-11
 
 #STEP 0: Set working directory to folder that contains downloaded and extracted 
-#       data folder/files.
-#       library(tidyverse)
+#       data folder/files. Then load the tidyverse library.
+
+library(tidyverse)
 
 #STEP 1: Merge training and test sets to create one data set.
 
 #       1A: read files into R (note: .zip downloaded from provided link and 
-#       extracted into working directory and a folder I named "UCI")
-testsub <- read.delim("./UCI/test/subject_test.txt", header = FALSE)
-testx <- read.delim("./UCI/test/X_test.txt", header = FALSE)
-testy <- read.delim("./UCI/test/y_test.txt", header = FALSE)
+#       extracted into working directory)
+testsub <- read.delim("./test/subject_test.txt", header = FALSE)
+testx <- read.delim("./test/X_test.txt", header = FALSE)
+testy <- read.delim("./test/y_test.txt", header = FALSE)
 
-trainsub <- read.delim("./UCI/train/subject_train.txt", header = FALSE)
-trainx <- read.delim("./UCI/train/X_train.txt", header = FALSE)
-trainy <- read.delim("./UCI/train/y_train.txt", header = FALSE)
+trainsub <- read.delim("./train/subject_train.txt", header = FALSE)
+trainx <- read.delim("./train/X_train.txt", header = FALSE)
+trainy <- read.delim("./train/y_train.txt", header = FALSE)
 
 #       1B: the testx and trainx objects are weird... there is only one column 
 #       but each row contains 561 values. These need to be spread out into 
@@ -25,7 +26,7 @@ trainy <- read.delim("./UCI/train/y_train.txt", header = FALSE)
 
 #       The column names are provided in the file features.txt. Need to read in 
 #       features and create a list of variable names.
-features <- read.delim("./UCI/features.txt", header = FALSE)
+features <- read.delim("./features.txt", header = FALSE)
 
 #       Oh, but guess what? The variable names are also confusing because each 
 #       includes a number, a space, and then the actual variable name. So, get 
