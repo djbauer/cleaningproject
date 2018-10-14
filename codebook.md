@@ -6,14 +6,14 @@ The section of information below is copied from the features_info.txt provided w
 >
 >The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 >
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).
+>Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).
 >
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
+>Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
 >
-These signals were used to estimate variables of the feature vector for each pattern:  
+>These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 >
-tBodyAcc-XYZ
+>tBodyAcc-XYZ
 tGravityAcc-XYZ
 tBodyAccJerk-XYZ
 tBodyGyro-XYZ
@@ -31,9 +31,9 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 >
-The set of variables that were estimated from these signals are:
+>The set of variables that were estimated from these signals are:
 >
-mean(): Mean value
+>mean(): Mean value
 std(): Standard deviation
 mad(): Median absolute deviation
 max(): Largest value in array
@@ -51,26 +51,26 @@ kurtosis(): kurtosis of the frequency domain signal
 bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
 angle(): Angle between to vectors.
 >
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+>Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 .
-gravityMean
+>gravityMean
 tBodyAccMean
 tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
-=================
+>=================
 
-##Codebook for meansoutput.csv - Section 2/2
+## Codebook for meansoutput.csv - Section 2/2
 This file is output by the run_analysis.R script and includes the following variables. Per the assignment instructions only variables of mean and standard deviation values were selected for analysis. The *subject* and *activity* factor variables were added for grouping purposes. Other than *subject* and *activity*, all variables are numeric.
 
-**Factor variables**
+### **Factor variables**
 * subject
   - Factor variable of subject number (1-30)
 
 * activity
   - Factor variable of activity with six levels: walking, upstairs, downstairs, sitting, standing, laying
 
-**Numeric variables; refer to information above for further explanation provided by the researchers. However, note that all numeric variables in meansoutput.csv report the average value for a given participant demonstrating a given activity, across trials**
+### **Numeric variables; refer to information above for further explanation provided by the researchers. However, note that all numeric variables in meansoutput.csv report the average value for a given participant demonstrating a given activity, across trials**
 * tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
 * tBodyAcc-mean()-Z
