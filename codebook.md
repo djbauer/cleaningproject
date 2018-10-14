@@ -12,8 +12,8 @@ The section of information below is copied from the features_info.txt provided w
 >These signals were used to estimate variables of the feature vector for each pattern:  
 >'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 >
->tBodyAcc-XYZ
->tGravityAcc-XYZ
+>* tBodyAcc-XYZ
+* >tGravityAcc-XYZ
 >tBodyAccJerk-XYZ
 >tBodyGyro-XYZ
 >tBodyGyroJerk-XYZ
